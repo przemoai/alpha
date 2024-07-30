@@ -1,0 +1,40 @@
+[project]
+name = "alpha"
+version = "0.0.1"
+description = "description"
+authors = [{ name = "przemoai", email = "again364@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12"
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+include = ["pyproject.toml", "src/**/*.py", "tests/**/*.py"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "C90"]
+ignore = ["E501"]
+
+
+[tool.mypy]
+files = ['src']
+strict = true
+config_file = "pyproject.toml"
+plugins = ["pydantic.mypy"]
+
+disallow_untyped_defs = true
+disallow_untyped_globals = true
+disallow_untyped_calls = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+show_column_numbers = true
+show_error_context = true
+follow_imports = "silent"
+warn_unused_ignores = true
