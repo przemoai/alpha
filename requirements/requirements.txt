@@ -54,6 +54,8 @@ markupsafe==2.1.5
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
+mypy-extensions==1.0.0
+    # via typing-inspect
 psutil==5.9.8
     # via fastapi-utils
 pydantic==2.8.2
@@ -89,6 +91,9 @@ typing-extensions==4.12.2
     #   pydantic
     #   pydantic-core
     #   typer
+    #   typing-inspect
+typing-inspect==0.9.0
+    # via -r requirements/requirements.in
 uvicorn==0.30.5
     # via
     #   fastapi
