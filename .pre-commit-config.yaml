@@ -18,8 +18,9 @@ repos:
     rev: 'v1.11.0'
     hooks:
       - id: mypy
+        files: '(src)/.*\.py$'
         additional_dependencies: [pydantic]
-        args: [--strict]
+        args: [--config-file=./pyproject.toml]
 
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.16.1
