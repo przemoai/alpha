@@ -1,1 +1,4 @@
 pydantic
+fastapi[standard]
+fastapi-utils
+typing_inspect
